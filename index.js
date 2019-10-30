@@ -10,7 +10,8 @@ admin.initializeApp({
 const db = admin.firestore()
 const fs = require('fs')
 const csvSync = require('csv-parse/lib/sync')
-const file = './camptix-export-2019-10-30.csv' //インポートしたいcsvファイルをindex.jsと同じ階層に入れてください
+// 登録件数によって失敗することがありそうです。うまくいかないときはファイルを分割してみてください。
+const file = '/Users/ryu/Documents/dev/wordcamp/firebaseImport/camptix-export-2019-10-30.csv' //インポートしたいcsvファイルをindex.jsと同じ階層に入れてください
 let data = fs.readFileSync(file) //csvファイルの読み込み
 let responses = csvSync(data)//parse csv
 let objects = [] //この配列の中にパースしたcsvの中身をkey-value形式で入れていく。
