@@ -9,8 +9,8 @@
   "author": "Ryu Shindo",
   "license": "ISC",
   "dependencies": {
-    "csv-parse": "^4.6.3",
-    "firebase-admin": "^8.6.0",
+    "csv-parse": "^4.6.5",
+    "firebase-admin": "^8.6.1",
     "firebase-import": "^2.2.0",
     "fs": "0.0.1-security"
   },
