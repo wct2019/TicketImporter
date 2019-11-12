@@ -8,22 +8,25 @@ WordCampのチケットデータを [wp-checkin](https://github.com/wct2019/wp-c
 - Node JS（LTSの新しいやつ v10 とか）
 - Tickesというコレクションを作っておく（スキーマの定義は不要だという理解です）
 
+上記の情報を `setting.json` に記載してください。サンプルとして `setting-sample.json` があります。
+
 ## インポート
 
 ```bash
 # インストール
 npm install
 # 実行
-node index.js
+npm start
 ```
 
 ## スキーマの定義
 
-インポートするデータのスキーマはこちらで定義されています。
+インポートするデータのスキーマはコールバックによって定義されています。
 
-https://github.com/wct2019/TicketImporter/blob/master/index.js#L19-L33
+https://github.com/wct2019/TicketImporter/blob/master/schema/tokyo2019.js
 
-ここを変更すると、データは変えられます。
+同様のJSを作成し（e.g. osaka2019.js ）、コールバックで返すものを変えればドキュメントも変わります。コールバック関数へのパスは `setting.json` で指定してください。
+コールバックを変更すると、データは変えられます。
 ただし、スキーマを変えた場合はチェックインシステムも多少いじる必要があるので、そこに留意してください。
 
 WordCampサイトに限らず固定のものは次の通りです。
