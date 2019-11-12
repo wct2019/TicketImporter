@@ -1,0 +1,6 @@
+{
+  "serviceAccount": "./wordcamptokyo2019app-firebase-key.json",
+  "databaseURL": "https://wordcamptokyo2019app.firebaseio.com",
+  "csv": "./camptix-export-2019-10-30.csv",
+  "callback": "./schema/tokyo2019.js"
+}

@@ -4,7 +4,8 @@
   "description": "firebase importer for wordcamp",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "node index.js"
   },
   "author": "Ryu Shindo",
   "license": "ISC",
